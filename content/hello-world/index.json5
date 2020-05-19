@@ -1,0 +1,19 @@
+{
+  title: "Hello world",
+  type: "post",
+  elements: [
+    {
+      component: "heading",
+      options: {
+        level: 1,
+        text: "Hi there!",
+      },
+    },
+    {
+      component: "paragraph",
+      options: {
+        text: "blah cblah <u>underline</u>",
+      },
+    },
+  ],
+}

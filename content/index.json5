@@ -1,0 +1,8 @@
+{
+  title: "Index",
+  elements: [
+    {
+      component: "list-of-posts",
+    },
+  ],
+}
