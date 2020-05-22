@@ -1,5 +1,6 @@
 {
   title: "Index",
+  contextStuff: 3,
   elements: [
     {
       component: "list-of-posts",

@@ -4,6 +4,11 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 const ListOfPosts = () => {
   const data = useStaticQuery(graphql`
     {
+      site {
+        siteMetadata {
+          foo
+        }
+      }
       allContent(filter: { type: { eq: "post" } }) {
         nodes {
           slug

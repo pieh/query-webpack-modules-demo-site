@@ -21,5 +21,8 @@ export const pq = graphql`
       title
       elements
     }
+    watWat {
+      b: foo
+    }
   }
 `

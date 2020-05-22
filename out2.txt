@@ -1,0 +1,368 @@
+success open and validate gatsby-configs - 0.019s
+success load plugins - 0.149s
+success onPreInit - 0.004s
+success initialize cache - 0.011s
+success copy gatsby files - 0.236s
+success onPreBootstrap - 0.029s
+success createSchemaCustomization - 0.005s
+success source and transform nodes - 0.103s
+success building schema - 0.278s
+/ false
+/hello-world/ false
+success createPages - 0.047s
+/dev-404-page/ false
+success createPagesStatefully - 0.102s
+success onPreExtractQueries - 0.001s
+success update schema - 0.024s
+success extract queries from components - 0.150s
+{ action: 'DELETE_COMPONENTS_DEPENDENCIES',
+  modules: Map {},
+  queryModuleDependencies: Map {} }
+warn The GraphQL query in the non-page component
+Exported queries are only executed for Page components. It's possible you're
+trying to create pages in your gatsby-node.js and that's failing for some
+reason.
+
+If the failing component(s) is a regular component and not intended to be a page
+component, you generally want to use a <StaticQuery> (https://gatsbyjs.org/docs/static-query)
+instead of exporting a page query.
+
+If you're more experienced with GraphQL, you can also export GraphQL
+fragments from components and compose the fragments in the Page component
+query and pass data down into the child component — https://graphql.org/learn/queries/#fragments
+{ action: 'DELETE_COMPONENTS_DEPENDENCIES',
+  modules: Map {},
+  queryModuleDependencies: Map {} }
+{ action: 'DELETE_COMPONENTS_DEPENDENCIES',
+  modules: Map {},
+  queryModuleDependencies: Map {} }
+success write out redirect data - 0.032s
+success onPostBootstrap - 0.007s
+⠀
+info bootstrap finished - 9.495s
+⠀
+dirty node SitePage /dev-404-page/
+dirty connection SitePage
+dirty node d48d1c52-fe48-53cb-8f08-aa4b47dde5a5
+dirty connection SitePlugin
+dirty node 1fc32581-893a-55e8-8927-bcd667e2b700
+dirty connection SitePlugin
+dirty node a5079d69-ba80-53dc-82f9-0f440bd5448c
+dirty connection SitePlugin
+dirty node f795702c-a3b8-5a88-88ee-5d06019d44fa
+dirty connection SitePlugin
+dirty node 6f4b2fa9-66b5-5205-a03f-140005a2cfe5
+dirty connection SitePlugin
+dirty node 61d669f5-191a-5e64-8b6f-dc7606171517
+dirty connection SitePlugin
+dirty node a693ec23-5bf5-5987-9061-1c001d59e5e3
+dirty connection SitePlugin
+dirty node 19463ad5-efb4-5f8a-b5c2-13f1c5a9c615
+dirty connection SitePlugin
+dirty node b2dfaed3-abd7-598f-8b31-455f7281a32a
+dirty connection SitePlugin
+dirty node 123e87e7-d5d0-5c9e-958f-092b0baa4667
+dirty connection SitePlugin
+dirty node 338df8ab-b0aa-541e-83cf-5f68a2b46f07
+dirty connection SitePlugin
+dirty node 594bacfa-f6b4-58fe-ab31-974372b871cc
+dirty connection SitePlugin
+dirty node 7374ebf2-d961-52ee-92a2-c25e7cb387a9
+dirty connection SitePlugin
+dirty node a58f9c71-fc82-5bcc-87ff-c26016f65ade
+dirty connection SitePlugin
+dirty node bd4b5c16-6f1d-55fa-a7f7-949cbc9875a7
+dirty connection SitePlugin
+dirty node Site
+dirty connection Site
+dirty node SiteBuildMetadata
+dirty connection SiteBuildMetadata
+dirty node 8ff93cfb-03e9-5905-816a-e49252faf3af
+dirty connection Directory
+dirty node 093fe684-cc0d-5d1e-8a69-06d12cfb2897
+dirty connection Directory
+dirty node e70c4c67-4e7f-54c4-b529-41a5c6f8d85a
+dirty connection File
+dirty node 13f26f40-c6ae-5e28-b88c-4736f48312e2
+dirty connection File
+dirty node e0a54013-6f0a-5122-ae42-8340d31a3455
+dirty connection Content
+dirty node 6ddcc609-cbf9-5ecb-8e99-4d96ff741ef1
+dirty connection Content
+dirty node SitePage /
+dirty connection SitePage
+dirty node SitePage /hello-world/
+dirty connection SitePage
+dirty node SitePage /dev-404-page/
+dirty connection SitePage
+{ action: 'DELETE_COMPONENTS_DEPENDENCIES',
+  modules: Map {},
+  queryModuleDependencies: Map {} }
+Running query 2411062488
+Running query /
+Running query /hello-world/
+Running query /dev-404-page/
+{ action: 'REGISTER_MODULE',
+  modules:
+   Map {
+     'module---src-components-page-builder-list-of-posts-js-default-' => { moduleID:
+        'module---src-components-page-builder-list-of-posts-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/list-of-posts.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set {} } },
+  queryModuleDependencies: Map {} }
+{ action: 'CREATE_MODULE_DEPENDENCY',
+  modules:
+   Map {
+     'module---src-components-page-builder-list-of-posts-js-default-' => { moduleID:
+        'module---src-components-page-builder-list-of-posts-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/list-of-posts.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/' } } },
+  queryModuleDependencies:
+   Map {
+     '/' => Set {
+       'module---src-components-page-builder-list-of-posts-js-default-' } } }
+{ action: 'REGISTER_MODULE',
+  modules:
+   Map {
+     'module---src-components-page-builder-list-of-posts-js-default-' => { moduleID:
+        'module---src-components-page-builder-list-of-posts-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/list-of-posts.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/' } },
+     'module---src-components-page-builder-heading-js-default-' => { moduleID: 'module---src-components-page-builder-heading-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/heading.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set {} } },
+  queryModuleDependencies:
+   Map {
+     '/' => Set {
+       'module---src-components-page-builder-list-of-posts-js-default-' } } }
+{ action: 'CREATE_MODULE_DEPENDENCY',
+  modules:
+   Map {
+     'module---src-components-page-builder-list-of-posts-js-default-' => { moduleID:
+        'module---src-components-page-builder-list-of-posts-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/list-of-posts.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/' } },
+     'module---src-components-page-builder-heading-js-default-' => { moduleID: 'module---src-components-page-builder-heading-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/heading.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/hello-world/' } } },
+  queryModuleDependencies:
+   Map {
+     '/' => Set {
+       'module---src-components-page-builder-list-of-posts-js-default-' },
+     '/hello-world/' => Set { 'module---src-components-page-builder-heading-js-default-' } } }
+{ action: 'REGISTER_MODULE',
+  modules:
+   Map {
+     'module---src-components-page-builder-list-of-posts-js-default-' => { moduleID:
+        'module---src-components-page-builder-list-of-posts-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/list-of-posts.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/' } },
+     'module---src-components-page-builder-heading-js-default-' => { moduleID: 'module---src-components-page-builder-heading-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/heading.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/hello-world/' } },
+     'module---src-components-page-builder-paragraph-js-default-' => { moduleID: 'module---src-components-page-builder-paragraph-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/paragraph.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set {} } },
+  queryModuleDependencies:
+   Map {
+     '/' => Set {
+       'module---src-components-page-builder-list-of-posts-js-default-' },
+     '/hello-world/' => Set { 'module---src-components-page-builder-heading-js-default-' } } }
+{ action: 'CREATE_MODULE_DEPENDENCY',
+  modules:
+   Map {
+     'module---src-components-page-builder-list-of-posts-js-default-' => { moduleID:
+        'module---src-components-page-builder-list-of-posts-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/list-of-posts.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/' } },
+     'module---src-components-page-builder-heading-js-default-' => { moduleID: 'module---src-components-page-builder-heading-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/heading.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/hello-world/' } },
+     'module---src-components-page-builder-paragraph-js-default-' => { moduleID: 'module---src-components-page-builder-paragraph-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/paragraph.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/hello-world/' } } },
+  queryModuleDependencies:
+   Map {
+     '/' => Set {
+       'module---src-components-page-builder-list-of-posts-js-default-' },
+     '/hello-world/' => Set {
+       'module---src-components-page-builder-heading-js-default-',
+       'module---src-components-page-builder-paragraph-js-default-' } } }
+{ id: '/',
+  moduleDependencies:
+   [ 'module---src-components-page-builder-list-of-posts-js-default-' ],
+  componentDataDependencies:
+   { nodes:
+      Map {
+        'Site' => Set { 'sq--src-components-page-builder-list-of-posts-js' },
+        'e0a54013-6f0a-5122-ae42-8340d31a3455' => Set { '/' },
+        '6ddcc609-cbf9-5ecb-8e99-4d96ff741ef1' => Set { '/hello-world/' } },
+     connections:
+      Map {
+        'Content' => Set { 'sq--src-components-page-builder-list-of-posts-js' } } } }
+{ id: '/hello-world/',
+  moduleDependencies:
+   [ 'module---src-components-page-builder-heading-js-default-',
+     'module---src-components-page-builder-paragraph-js-default-' ],
+  componentDataDependencies:
+   { nodes:
+      Map {
+        'Site' => Set { 'sq--src-components-page-builder-list-of-posts-js' },
+        'e0a54013-6f0a-5122-ae42-8340d31a3455' => Set { '/' },
+        '6ddcc609-cbf9-5ecb-8e99-4d96ff741ef1' => Set { '/hello-world/' } },
+     connections:
+      Map {
+        'Content' => Set { 'sq--src-components-page-builder-list-of-posts-js' } } } }
+{ id: '/dev-404-page/',
+  moduleDependencies: [],
+  componentDataDependencies:
+   { nodes:
+      Map {
+        'Site' => Set { 'sq--src-components-page-builder-list-of-posts-js' },
+        'e0a54013-6f0a-5122-ae42-8340d31a3455' => Set { '/' },
+        '6ddcc609-cbf9-5ecb-8e99-4d96ff741ef1' => Set { '/hello-world/' } },
+     connections:
+      Map {
+        'Content' => Set { 'sq--src-components-page-builder-list-of-posts-js' },
+        'SitePage' => Set { '/dev-404-page/' } } } }
+success run queries - 0.675s - 4/4 5.93/s
+----START----
+{ action: 'DELETE_COMPONENTS_DEPENDENCIES',
+  modules:
+   Map {
+     'module---src-components-page-builder-list-of-posts-js-default-' => { moduleID:
+        'module---src-components-page-builder-list-of-posts-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/list-of-posts.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/' } },
+     'module---src-components-page-builder-heading-js-default-' => { moduleID: 'module---src-components-page-builder-heading-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/heading.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/hello-world/' } },
+     'module---src-components-page-builder-paragraph-js-default-' => { moduleID: 'module---src-components-page-builder-paragraph-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/paragraph.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/hello-world/' } } },
+  queryModuleDependencies:
+   Map {
+     '/' => Set {
+       'module---src-components-page-builder-list-of-posts-js-default-' },
+     '/hello-world/' => Set {
+       'module---src-components-page-builder-heading-js-default-',
+       'module---src-components-page-builder-paragraph-js-default-' } } }
+{ action: 'DELETE_COMPONENTS_DEPENDENCIES',
+  modules:
+   Map {
+     'module---src-components-page-builder-list-of-posts-js-default-' => { moduleID:
+        'module---src-components-page-builder-list-of-posts-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/list-of-posts.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/' } },
+     'module---src-components-page-builder-heading-js-default-' => { moduleID: 'module---src-components-page-builder-heading-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/heading.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/hello-world/' } },
+     'module---src-components-page-builder-paragraph-js-default-' => { moduleID: 'module---src-components-page-builder-paragraph-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/paragraph.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/hello-world/' } } },
+  queryModuleDependencies:
+   Map {
+     '/' => Set {
+       'module---src-components-page-builder-list-of-posts-js-default-' },
+     '/hello-world/' => Set {
+       'module---src-components-page-builder-heading-js-default-',
+       'module---src-components-page-builder-paragraph-js-default-' } } }
+{ action: 'DELETE_COMPONENTS_DEPENDENCIES',
+  modules:
+   Map {
+     'module---src-components-page-builder-list-of-posts-js-default-' => { moduleID:
+        'module---src-components-page-builder-list-of-posts-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/list-of-posts.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/' } },
+     'module---src-components-page-builder-heading-js-default-' => { moduleID: 'module---src-components-page-builder-heading-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/heading.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/hello-world/' } },
+     'module---src-components-page-builder-paragraph-js-default-' => { moduleID: 'module---src-components-page-builder-paragraph-js-default-',
+       source:
+        '/mnt/d/dev/query-webpack-modules-demo-site/src/components/page-builder/paragraph.js',
+       type: 'default',
+       importName: undefined,
+       queryIDs: Set { '/hello-world/' } } },
+  queryModuleDependencies:
+   Map {
+     '/' => Set {
+       'module---src-components-page-builder-list-of-posts-js-default-' },
+     '/hello-world/' => Set {
+       'module---src-components-page-builder-heading-js-default-',
+       'module---src-components-page-builder-paragraph-js-default-' } } }
+⠀
+You can now view query-webpack-modules-demo-site in the browser.
+⠀
+  http://localhost:8000/
+⠀
+View GraphiQL, an in-browser IDE, to explore your site's data and schema
+⠀
+  http://localhost:8000/___graphql
+⠀
+Note that the development build is not optimized.
+To create a production build, use gatsby build
+⠀
+success Building development bundle - 7.604s
+----RESUME----
+success Re-building development bundle - 4.754s
+----RESUME----

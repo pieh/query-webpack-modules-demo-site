@@ -1,6 +1,21 @@
 const JSON5 = require(`json5`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+
+exports.sourceNodes = ({ actions }) => {
+  if (process.env.WAT) {
+    actions.createNode({
+      id: 'wat',
+      foo: 'bar',
+      internal: {
+        type: 'WatWat',
+        contentDigest: 'yikes'
+      }
+    })
+  }
+}
+
+
 exports.onCreateNode = async ({
   node,
   actions,
@@ -31,6 +46,11 @@ exports.onCreateNode = async ({
 }
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
+  actions.createTypes(`
+  type WatWat implements Node {
+    foo: String
+  }
+  `)
   actions.createTypes([
     schema.buildObjectType({
       name: `Content`,
@@ -38,6 +58,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       fields: {
         slug: `String`,
         title: `String`,
+        contextStuff: `String`,
         elements: {
           type: `[JSON]`,
           resolve: (source, args, context) => {
@@ -69,6 +90,7 @@ exports.createPages = async ({ actions, graphql }) => {
         nodes {
           id
           slug
+          contextStuff
         }
       }
     }
@@ -80,6 +102,7 @@ exports.createPages = async ({ actions, graphql }) => {
       component: require.resolve(`./src/templates/page`),
       context: {
         id: node.id,
+        contextStuff: node.contextStuff,
       },
     })
   })

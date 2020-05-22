@@ -1,0 +1,232 @@
+Dependencies of 'gatsby' changed:
+ - 'http-proxy' changed version from ^1.18.0 to ^1.18.1
+Will publish to local npm registry.
+Starting local verdaccio server
+[2020-05-22 14:29:29]  warn --- Verdaccio started
+Started local verdaccio server
+Publishing gatsby@2.22.9-dev-1590150569552 to local registry
+
+> gatsby@2.22.9-dev-1590150569552 prepare .
+> cross-env NODE_ENV=production npm run build
+
+
+> gatsby@2.22.9-dev-1590150569552 prebuild /mnt/d/dev/gatsby-mbp/packages/gatsby
+> rimraf dist && rimraf cache-dir/commonjs
+
+
+> gatsby@2.22.9-dev-1590150569552 build /mnt/d/dev/gatsby-mbp/packages/gatsby
+> npm run build:src && npm run build:internal-plugins && npm run build:rawfiles && npm run build:cjs
+
+
+> gatsby@2.22.9-dev-1590150569552 build:src /mnt/d/dev/gatsby-mbp/packages/gatsby
+> babel src --out-dir dist --source-maps --verbose --ignore "**/gatsby-cli.js,src/internal-plugins/dev-404-page/raw_dev-404-page.js,**/__tests__" --extensions ".ts,.js"
+
+src/bin/gatsby.js -> dist/bin/gatsby.js
+src/bootstrap/__mocks__/require/exports.js -> dist/bootstrap/__mocks__/require/exports.js
+src/bootstrap/__mocks__/require/module-error.js -> dist/bootstrap/__mocks__/require/module-error.js
+src/bootstrap/__mocks__/require/unusual-exports.js -> dist/bootstrap/__mocks__/require/unusual-exports.js
+src/bootstrap/__mocks__/resolve-module-exports.js -> dist/bootstrap/__mocks__/resolve-module-exports.js
+src/bootstrap/create-graphql-runner.ts -> dist/bootstrap/create-graphql-runner.js
+src/bootstrap/get-config-file.ts -> dist/bootstrap/get-config-file.js
+src/bootstrap/index.js -> dist/bootstrap/index.js
+src/bootstrap/load-plugins/index.js -> dist/bootstrap/load-plugins/index.js
+src/bootstrap/load-plugins/load.js -> dist/bootstrap/load-plugins/load.js
+src/bootstrap/load-plugins/validate.js -> dist/bootstrap/load-plugins/validate.js
+src/bootstrap/load-themes/index.js -> dist/bootstrap/load-themes/index.js
+src/bootstrap/log-line-function.ts -> dist/bootstrap/log-line-function.js
+src/bootstrap/page-hot-reloader.js -> dist/bootstrap/page-hot-reloader.js
+src/bootstrap/prefer-default.ts -> dist/bootstrap/prefer-default.js
+src/bootstrap/redirects-writer.ts -> dist/bootstrap/redirects-writer.js
+src/bootstrap/remove-stale-jobs.ts -> dist/bootstrap/remove-stale-jobs.js
+src/bootstrap/requires-writer.js -> dist/bootstrap/requires-writer.js
+src/bootstrap/resolve-module-exports.js -> dist/bootstrap/resolve-module-exports.js
+src/bootstrap/schema-hot-reloader.ts -> dist/bootstrap/schema-hot-reloader.js
+src/commands/build-html.ts -> dist/commands/build-html.js
+src/commands/build-javascript.ts -> dist/commands/build-javascript.js
+src/commands/build-utils.ts -> dist/commands/build-utils.js
+src/commands/build.ts -> dist/commands/build.js
+src/commands/clean.ts -> dist/commands/clean.js
+src/commands/develop-process.ts -> dist/commands/develop-process.js
+src/commands/develop-static.ts -> dist/commands/develop-static.js
+src/commands/develop.ts -> dist/commands/develop.js
+src/commands/feedback.ts -> dist/commands/feedback.js
+src/commands/repl.ts -> dist/commands/repl.js
+src/commands/serve.ts -> dist/commands/serve.js
+src/commands/types.ts -> dist/commands/types.js
+src/db/common/query.ts -> dist/db/common/query.js
+src/db/index.js -> dist/db/index.js
+src/db/nodes.js -> dist/db/nodes.js
+src/db/sanitize-node.js -> dist/db/sanitize-node.js
+src/internal-plugins/dev-404-page/gatsby-node.js -> dist/internal-plugins/dev-404-page/gatsby-node.js
+src/internal-plugins/dev-404-page/index.js -> dist/internal-plugins/dev-404-page/index.js
+src/internal-plugins/internal-data-bridge/gatsby-node.js -> dist/internal-plugins/internal-data-bridge/gatsby-node.js
+src/internal-plugins/internal-data-bridge/index.js -> dist/internal-plugins/internal-data-bridge/index.js
+src/internal-plugins/load-babel-config/gatsby-node.js -> dist/internal-plugins/load-babel-config/gatsby-node.js
+src/internal-plugins/load-babel-config/index.js -> dist/internal-plugins/load-babel-config/index.js
+src/internal-plugins/prod-404/gatsby-node.js -> dist/internal-plugins/prod-404/gatsby-node.js
+src/internal-plugins/prod-404/index.js -> dist/internal-plugins/prod-404/index.js
+src/internal-plugins/webpack-theme-component-shadowing/create-page.js -> dist/internal-plugins/webpack-theme-component-shadowing/create-page.js
+src/internal-plugins/webpack-theme-component-shadowing/gatsby-node.js -> dist/internal-plugins/webpack-theme-component-shadowing/gatsby-node.js
+src/internal-plugins/webpack-theme-component-shadowing/index.js -> dist/internal-plugins/webpack-theme-component-shadowing/index.js
+src/joi-schemas/joi.ts -> dist/joi-schemas/joi.js
+src/query/better-queue-custom-store.js -> dist/query/better-queue-custom-store.js
+src/query/error-parser.ts -> dist/query/error-parser.js
+src/query/file-parser.js -> dist/query/file-parser.js
+src/query/graphql-errors.js -> dist/query/graphql-errors.js
+src/query/graphql-runner.ts -> dist/query/graphql-runner.js
+src/query/graphql-span-tracer.ts -> dist/query/graphql-span-tracer.js
+src/query/index.js -> dist/query/index.js
+src/query/query-compiler.js -> dist/query/query-compiler.js
+src/query/query-runner.ts -> dist/query/query-runner.js
+src/query/query-watcher.js -> dist/query/query-watcher.js
+src/query/queue.js -> dist/query/queue.js
+src/query/redirects-writer.ts -> dist/query/redirects-writer.js
+src/query/types.ts -> dist/query/types.js
+src/query/utils.ts -> dist/query/utils.js
+src/redux/actions/add-page-dependency.ts -> dist/redux/actions/add-page-dependency.js
+src/redux/actions/index.ts -> dist/redux/actions/index.js
+src/redux/actions/internal.ts -> dist/redux/actions/internal.js
+src/redux/actions/modules/register-module.ts -> dist/redux/actions/modules/register-module.js
+src/redux/actions/public.js -> dist/redux/actions/public.js
+src/redux/actions/restricted.ts -> dist/redux/actions/restricted.js
+src/redux/index.ts -> dist/redux/index.js
+src/redux/machines/page-component.ts -> dist/redux/machines/page-component.js
+src/redux/nodes.ts -> dist/redux/nodes.js
+src/redux/persist.ts -> dist/redux/persist.js
+src/redux/plugin-runner.ts -> dist/redux/plugin-runner.js
+src/redux/reducers/babelrc.ts -> dist/redux/reducers/babelrc.js
+src/redux/reducers/component-data-dependencies.ts -> dist/redux/reducers/component-data-dependencies.js
+src/redux/reducers/components.ts -> dist/redux/reducers/components.js
+src/redux/reducers/config.ts -> dist/redux/reducers/config.js
+src/redux/reducers/flattened-plugins.js -> dist/redux/reducers/flattened-plugins.js
+src/redux/reducers/index.js -> dist/redux/reducers/index.js
+src/redux/reducers/inference-metadata.js -> dist/redux/reducers/inference-metadata.js
+src/redux/reducers/jobs.ts -> dist/redux/reducers/jobs.js
+src/redux/reducers/jobsv2.ts -> dist/redux/reducers/jobsv2.js
+src/redux/reducers/last-action.ts -> dist/redux/reducers/last-action.js
+src/redux/reducers/modules.ts -> dist/redux/reducers/modules.js
+src/redux/reducers/nodes-by-type.js -> dist/redux/reducers/nodes-by-type.js
+src/redux/reducers/nodes-touched.ts -> dist/redux/reducers/nodes-touched.js
+src/redux/reducers/nodes.ts -> dist/redux/reducers/nodes.js
+src/redux/reducers/page-data-stats.ts -> dist/redux/reducers/page-data-stats.js
+src/redux/reducers/page-data.ts -> dist/redux/reducers/page-data.js
+src/redux/reducers/pages.ts -> dist/redux/reducers/pages.js
+src/redux/reducers/program.js -> dist/redux/reducers/program.js
+src/redux/reducers/query-module-dependencies.ts -> dist/redux/reducers/query-module-dependencies.js
+src/redux/reducers/redirects.ts -> dist/redux/reducers/redirects.js
+src/redux/reducers/resolved-nodes.js -> dist/redux/reducers/resolved-nodes.js
+src/redux/reducers/schema-customization.js -> dist/redux/reducers/schema-customization.js
+src/redux/reducers/schema.ts -> dist/redux/reducers/schema.js
+src/redux/reducers/static-query-components.ts -> dist/redux/reducers/static-query-components.js
+src/redux/reducers/status.ts -> dist/redux/reducers/status.js
+src/redux/reducers/themes.ts -> dist/redux/reducers/themes.js
+src/redux/reducers/webpack-compilation-hash.ts -> dist/redux/reducers/webpack-compilation-hash.js
+src/redux/reducers/webpack.ts -> dist/redux/reducers/webpack.js
+src/redux/run-sift.js -> dist/redux/run-sift.js
+src/redux/types.ts -> dist/redux/types.js
+src/schema/context.ts -> dist/schema/context.js
+src/schema/extensions/index.js -> dist/schema/extensions/index.js
+src/schema/index.js -> dist/schema/index.js
+src/schema/infer/add-inferred-fields.js -> dist/schema/infer/add-inferred-fields.js
+src/schema/infer/build-example-data.ts -> dist/schema/infer/build-example-data.js
+src/schema/infer/index.js -> dist/schema/infer/index.js
+src/schema/infer/inference-metadata.ts -> dist/schema/infer/inference-metadata.js
+src/schema/infer/is-file.js -> dist/schema/infer/is-file.js
+src/schema/infer/type-conflict-reporter.ts -> dist/schema/infer/type-conflict-reporter.js
+src/schema/node-model.js -> dist/schema/node-model.js
+src/schema/print.js -> dist/schema/print.js
+src/schema/resolvers.ts -> dist/schema/resolvers.js
+src/schema/schema-composer.js -> dist/schema/schema-composer.js
+src/schema/schema.js -> dist/schema/schema.js
+src/schema/type-definitions.ts -> dist/schema/type-definitions.js
+src/schema/types/built-in-types.ts -> dist/schema/types/built-in-types.js
+src/schema/types/date.js -> dist/schema/types/date.js
+src/schema/types/derived-types.js -> dist/schema/types/derived-types.js
+src/schema/types/filter.js -> dist/schema/types/filter.js
+src/schema/types/node-interface.js -> dist/schema/types/node-interface.js
+src/schema/types/pagination.ts -> dist/schema/types/pagination.js
+src/schema/types/sort.js -> dist/schema/types/sort.js
+src/schema/types/type-builders.js -> dist/schema/types/type-builders.js
+src/schema/types/type-defs.js -> dist/schema/types/type-defs.js
+src/types.ts -> dist/types.js
+src/utils/api-browser-docs.ts -> dist/utils/api-browser-docs.js
+src/utils/api-node-docs.ts -> dist/utils/api-node-docs.js
+src/utils/api-node-helpers-docs.js -> dist/utils/api-node-helpers-docs.js
+src/utils/api-runner-error-parser.ts -> dist/utils/api-runner-error-parser.js
+src/utils/api-runner-node.js -> dist/utils/api-runner-node.js
+src/utils/app-data.ts -> dist/utils/app-data.js
+src/utils/babel-loader-helpers.js -> dist/utils/babel-loader-helpers.js
+src/utils/babel-loader.js -> dist/utils/babel-loader.js
+src/utils/babel-parse-to-ast.ts -> dist/utils/babel-parse-to-ast.js
+src/utils/browserslist.ts -> dist/utils/browserslist.js
+src/utils/cache.ts -> dist/utils/cache.js
+src/utils/create-node-id.ts -> dist/utils/create-node-id.js
+src/utils/create-pages.ts -> dist/utils/create-pages.js
+src/utils/create-schema-customization.ts -> dist/utils/create-schema-customization.js
+src/utils/detect-port-in-use-and-prompt.ts -> dist/utils/detect-port-in-use-and-prompt.js
+src/utils/develop-proxy.ts -> dist/utils/develop-proxy.js
+src/utils/did-you-mean.ts -> dist/utils/did-you-mean.js
+src/utils/eslint-config.ts -> dist/utils/eslint-config.js
+src/utils/feedback.ts -> dist/utils/feedback.js
+src/utils/gatsby-dependents.ts -> dist/utils/gatsby-dependents.js
+src/utils/gatsby-webpack-eslint-graphql-schema-reload-plugin.ts -> dist/utils/gatsby-webpack-eslint-graphql-schema-reload-plugin.js
+src/utils/gatsby-webpack-stats-extractor.ts -> dist/utils/gatsby-webpack-stats-extractor.js
+src/utils/get-cache.ts -> dist/utils/get-cache.js
+src/utils/get-latest-apis.ts -> dist/utils/get-latest-apis.js
+src/utils/get-public-path.ts -> dist/utils/get-public-path.js
+src/utils/get-ssl-cert.js -> dist/utils/get-ssl-cert.js
+src/utils/get-static-dir.ts -> dist/utils/get-static-dir.js
+src/utils/get-value-at.ts -> dist/utils/get-value-at.js
+src/utils/is-32-bit-integer.ts -> dist/utils/is-32-bit-integer.js
+src/utils/jobs-manager.js -> dist/utils/jobs-manager.js
+src/utils/js-chunk-names.ts -> dist/utils/js-chunk-names.js
+src/utils/local-eslint-config-finder.ts -> dist/utils/local-eslint-config-finder.js
+src/utils/map-pages-to-static-query-hashes.ts -> dist/utils/map-pages-to-static-query-hashes.js
+src/utils/merge-gatsby-config.ts -> dist/utils/merge-gatsby-config.js
+src/utils/mett.ts -> dist/utils/mett.js
+src/utils/normalize-page-path.ts -> dist/utils/normalize-page-path.js
+src/utils/page-data.js -> dist/utils/page-data.js
+src/utils/page-html.ts -> dist/utils/page-html.js
+src/utils/path.ts -> dist/utils/path.js
+src/utils/prepare-regex.ts -> dist/utils/prepare-regex.js
+src/utils/prepare-urls.ts -> dist/utils/prepare-urls.js
+src/utils/profile.js -> dist/utils/profile.js
+src/utils/reach-router-add-basecontext-export-loader.ts -> dist/utils/reach-router-add-basecontext-export-loader.js
+src/utils/restarting-screen.ts -> dist/utils/restarting-screen.js
+src/utils/source-nodes.ts -> dist/utils/source-nodes.js
+src/utils/stack-trace-utils.ts -> dist/utils/stack-trace-utils.js
+src/utils/test-require-error.ts -> dist/utils/test-require-error.js
+src/utils/tracer/index.ts -> dist/utils/tracer/index.js
+src/utils/tracer/jaeger-local.ts -> dist/utils/tracer/jaeger-local.js
+src/utils/tracer/zipkin-local.ts -> dist/utils/tracer/zipkin-local.js
+src/utils/tracer/zipkin-types.d.ts -> dist/utils/tracer/zipkin-types.d.js
+src/utils/wait-until-jobs-complete.ts -> dist/utils/wait-until-jobs-complete.js
+src/utils/webpack-error-utils.ts -> dist/utils/webpack-error-utils.js
+src/utils/webpack-gatsby-page-deps-plugin.js -> dist/utils/webpack-gatsby-page-deps-plugin.js
+src/utils/webpack-hmr-hooks-patch.js -> dist/utils/webpack-hmr-hooks-patch.js
+src/utils/webpack-plugins.ts -> dist/utils/webpack-plugins.js
+src/utils/webpack-utils.ts -> dist/utils/webpack-utils.js
+src/utils/webpack.config.js -> dist/utils/webpack.config.js
+src/utils/websocket-manager.ts -> dist/utils/websocket-manager.js
+src/utils/worker/child.ts -> dist/utils/worker/child.js
+src/utils/worker/page-data.ts -> dist/utils/worker/page-data.js
+src/utils/worker/pool.ts -> dist/utils/worker/pool.js
+src/utils/worker/render-html.ts -> dist/utils/worker/render-html.js
+Successfully compiled 191 files with Babel.
+
+> gatsby@2.22.9-dev-1590150569552 build:internal-plugins /mnt/d/dev/gatsby-mbp/packages/gatsby
+> copyfiles -u 1 src/internal-plugins/**/package.json dist
+
+
+> gatsby@2.22.9-dev-1590150569552 build:rawfiles /mnt/d/dev/gatsby-mbp/packages/gatsby
+> copyfiles -u 1 src/internal-plugins/**/raw_* dist
+
+
+> gatsby@2.22.9-dev-1590150569552 build:cjs /mnt/d/dev/gatsby-mbp/packages/gatsby
+> babel cache-dir --out-dir cache-dir/commonjs --ignore "**/__tests__"
+
+Successfully compiled 32 files with Babel.
+
+> gatsby@2.22.9-dev-1590150569552 postbuild /mnt/d/dev/gatsby-mbp/packages/gatsby
+> node scripts/output-api-file.js
+
