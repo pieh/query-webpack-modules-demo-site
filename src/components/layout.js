@@ -1,13 +1,42 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link, graphql, useStaticQuery, getModule } from "gatsby";
 
-const Layout = ({ children }) => (
-  <div>
-    <h1>
-      <Link to="/">Module deps page builder demo</Link>
-    </h1>
-    <main>{children}</main>
-  </div>
-)
+const Layout = ({ children }) => {
+  const stuff = useStaticQuery(graphql`
+    {
+      content(type: { eq: "static-query" }) {
+        title
+        # elements
+      }
+    }
+  `);
 
-export default Layout
+  console.log({ stuff });
+
+  const node = stuff.content;
+
+  return (
+    <div>
+      <h1>
+        <Link to="/">Module deps page builder demo</Link>
+      </h1>
+      <main>{children}</main>
+      <hr />
+      <footer>
+        <h6>{node.title}</h6>
+        {/* {node.elements.map((element) => {
+          const Component = getModule(element.component);
+
+          console.log({ Component });
+          if (!Component) {
+            return <span>loading...</span>;
+          }
+
+          return <Component {...element.options} />;
+        })} */}
+      </footer>
+    </div>
+  );
+};
+
+export default Layout;

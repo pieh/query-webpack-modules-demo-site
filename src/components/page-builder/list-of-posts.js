@@ -1,5 +1,5 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
 
 const ListOfPosts = () => {
   const data = useStaticQuery(graphql`
@@ -13,19 +13,21 @@ const ListOfPosts = () => {
         nodes {
           slug
           title
+          # elements
         }
       }
     }
-  `)
+  `);
   return (
     <ul>
-      {data.allContent.nodes.map(node => (
+      list here blah
+      {data.allContent.nodes.map((node) => (
         <li key={node.slug}>
           <Link to={node.slug}>{node.title}</Link>
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default ListOfPosts
+export default ListOfPosts;

@@ -1,19 +1,33 @@
-import React from "react"
-import Layout from "../components/layout"
+import React from "react";
+import Layout from "../components/layout";
 
-import { graphql, getModule } from "gatsby"
+import { graphql, getModule } from "gatsby";
 
 const PageTemplate = ({ data }) => (
   <Layout>
+    test2
     <h2>{data.content.title}</h2>
-    {data.content.elements.map(element => {
-      const Component = getModule(element.component)
-      return <Component {...element.options} />
+    {data.content.elements.map((element) => {
+      const pre = <pre>{JSON.stringify(element, null, 2)}</pre>;
+
+      const Component = getModule(element.component);
+
+      console.log({ Component });
+      if (!Component) {
+        return <span>loading...</span>;
+      }
+
+      return (
+        <>
+          <Component {...element.options} />
+          {pre}
+        </>
+      );
     })}
   </Layout>
-)
+);
 
-export default PageTemplate
+export default PageTemplate;
 
 export const pq = graphql`
   query($id: String!) {
@@ -21,8 +35,5 @@ export const pq = graphql`
       title
       elements
     }
-    watWat {
-      b: foo
-    }
   }
-`
+`;

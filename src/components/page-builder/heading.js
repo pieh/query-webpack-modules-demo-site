@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
 const Heading = ({ level, text }) => {
-  const HeadingElement = `h${level}`
+  const HeadingElement = `h${level}`;
 
-  return <HeadingElement>{text}</HeadingElement>
-}
+  return <HeadingElement>watz{text}</HeadingElement>;
+};
 
-export default Heading
+export default Heading;

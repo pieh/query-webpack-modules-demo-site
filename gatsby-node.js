@@ -1,20 +1,18 @@
-const JSON5 = require(`json5`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
-
+const JSON5 = require(`json5`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.sourceNodes = ({ actions }) => {
   if (process.env.WAT) {
     actions.createNode({
-      id: 'wat',
-      foo: 'bar',
+      id: "wat",
+      foo: "bar",
       internal: {
-        type: 'WatWat',
-        contentDigest: 'yikes'
-      }
-    })
+        type: "WatWat",
+        contentDigest: "yikes",
+      },
+    });
   }
-}
-
+};
 
 exports.onCreateNode = async ({
   node,
@@ -25,13 +23,13 @@ exports.onCreateNode = async ({
   getNode,
 }) => {
   if (node.internal.mediaType !== `application/json5`) {
-    return
+    return;
   }
 
-  const content = await loadNodeContent(node)
-  const parsed = JSON5.parse(content)
+  const content = await loadNodeContent(node);
+  const parsed = JSON5.parse(content);
 
-  const slug = createFilePath({ node, getNode })
+  const slug = createFilePath({ node, getNode });
 
   actions.createNode({
     ...parsed,
@@ -42,15 +40,15 @@ exports.onCreateNode = async ({
       type: `Content`,
       contentDigest: createContentDigest(parsed),
     },
-  })
-}
+  });
+};
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
   actions.createTypes(`
   type WatWat implements Node {
     foo: String
   }
-  `)
+  `);
   actions.createTypes([
     schema.buildObjectType({
       name: `Content`,
@@ -61,27 +59,30 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         contextStuff: `String`,
         elements: {
           type: `[JSON]`,
-          resolve: (source, args, context) => {
-            const elements = source.elements || []
-
-            return elements.map(element => {
-              const moduleID = context.addModuleDependency({
+          resolve: async (source, args, context) => {
+            const elements = (source.elements || []).map((element) => {
+              const moduleID = context.pageModel.setModule({
                 source: require.resolve(
                   `./src/components/page-builder/${element.component}`
                 ),
-              })
+              });
 
               return {
                 ...element,
                 component: moduleID,
-              }
-            })
+              };
+            });
+
+            // add synthetic delay after adding module deps
+            // await new Promise((resolve) => setTimeout(resolve, 10000));
+
+            return elements;
           },
         },
       },
     }),
-  ])
-}
+  ]);
+};
 
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
@@ -89,14 +90,19 @@ exports.createPages = async ({ actions, graphql }) => {
       allContent {
         nodes {
           id
+          createPage
           slug
           contextStuff
         }
       }
     }
-  `)
+  `);
 
-  data.allContent.nodes.forEach(node => {
+  data.allContent.nodes.forEach((node) => {
+    if (node.createPage === false) {
+      return;
+    }
+
     actions.createPage({
       path: node.slug,
       component: require.resolve(`./src/templates/page`),
@@ -104,6 +110,6 @@ exports.createPages = async ({ actions, graphql }) => {
         id: node.id,
         contextStuff: node.contextStuff,
       },
-    })
-  })
-}
+    });
+  });
+};

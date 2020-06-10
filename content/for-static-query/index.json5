@@ -1,0 +1,23 @@
+{
+  title: "Content for static query",
+  type: "static-query",
+  createPage: false,
+  elements: [
+    // {
+    //   component: "heading",
+    //   options: {
+    //     level: 1,
+    //     text: "Hi there2q!zzz",
+    //   },
+    // },
+    {
+      component: "paragraph",
+      options: {
+        text: "some paragraph",
+      },
+    },
+    // {
+    //   component: "list-of-posts",
+    // },
+  ],
+}
