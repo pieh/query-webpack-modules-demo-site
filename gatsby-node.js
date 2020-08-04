@@ -48,6 +48,12 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   type WatWat implements Node {
     foo: String
   }
+
+  type Chain {
+    sleep(timeout: Int):  Chain!
+    result: JSON
+  }
+
   `);
   actions.createTypes([
     schema.buildObjectType({
@@ -60,6 +66,8 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         elements: {
           type: `[JSON]`,
           resolve: async (source, args, context) => {
+            // await new Promise((resolve) => setTimeout(resolve, 2500));
+
             const elements = (source.elements || []).map((element) => {
               const moduleID = context.pageModel.setModule({
                 source: require.resolve(
@@ -74,7 +82,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
             });
 
             // add synthetic delay after adding module deps
-            // await new Promise((resolve) => setTimeout(resolve, 10000));
+            // await new Promise((resolve) => setTimeout(resolve, 2500));
 
             return elements;
           },
@@ -111,5 +119,34 @@ exports.createPages = async ({ actions, graphql }) => {
         contextStuff: node.contextStuff,
       },
     });
+  });
+};
+
+exports.createResolvers = ({ createResolvers }) => {
+  const methods = {
+    sleep: {
+      type: `Chain`,
+      args: {
+        timeout: {
+          type: `Int`,
+          defaultValue: 1000,
+        },
+      },
+      resolve: async function (source, args, context, info) {
+        const timeout = args.timeout || 1000;
+        return new Promise((resolve) =>
+          setTimeout(() => {
+            resolve({
+              result: { timeout },
+            });
+          }, timeout)
+        );
+      },
+    },
+  };
+
+  createResolvers({
+    Chain: methods,
+    Query: methods,
   });
 };

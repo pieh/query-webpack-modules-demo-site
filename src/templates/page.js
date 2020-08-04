@@ -5,14 +5,13 @@ import { graphql, getModule } from "gatsby";
 
 const PageTemplate = ({ data }) => (
   <Layout>
-    test2
     <h2>{data.content.title}</h2>
     {data.content.elements.map((element) => {
       const pre = <pre>{JSON.stringify(element, null, 2)}</pre>;
 
       const Component = getModule(element.component);
 
-      console.log({ Component });
+      console.log({ Component, id: element.component });
       if (!Component) {
         return <span>loading...</span>;
       }
@@ -35,5 +34,8 @@ export const pq = graphql`
       title
       elements
     }
+    # sleep(timeout: 2500) {
+    #   result
+    # }
   }
 `;

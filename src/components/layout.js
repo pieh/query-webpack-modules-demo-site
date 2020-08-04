@@ -2,18 +2,18 @@ import React from "react";
 import { Link, graphql, useStaticQuery, getModule } from "gatsby";
 
 const Layout = ({ children }) => {
-  const stuff = useStaticQuery(graphql`
-    {
-      content(type: { eq: "static-query" }) {
-        title
-        # elements
-      }
-    }
-  `);
+  // const stuff = useStaticQuery(graphql`
+  //   {
+  //     content(type: { eq: "static-query" }) {
+  //       title
+  //       # elements
+  //     }
+  //   }
+  // `);
 
-  console.log({ stuff });
+  // console.log({ stuff });
 
-  const node = stuff.content;
+  // const node = stuff.content;
 
   return (
     <div>
@@ -21,20 +21,10 @@ const Layout = ({ children }) => {
         <Link to="/">Module deps page builder demo</Link>
       </h1>
       <main>{children}</main>
-      <hr />
+      {/* <hr />
       <footer>
         <h6>{node.title}</h6>
-        {/* {node.elements.map((element) => {
-          const Component = getModule(element.component);
-
-          console.log({ Component });
-          if (!Component) {
-            return <span>loading...</span>;
-          }
-
-          return <Component {...element.options} />;
-        })} */}
-      </footer>
+      </footer> */}
     </div>
   );
 };
