@@ -6,7 +6,7 @@ import { graphql, getModule } from "gatsby";
 const PageTemplate = ({ data }) => (
   <Layout>
     <h2>{data.content.title}</h2>
-    {data.content.elements.map((element) => {
+    {data.content.elementsButWithFieldExtension.map((element) => {
       const pre = <pre>{JSON.stringify(element, null, 2)}</pre>;
 
       const Component = getModule(element.component);
@@ -23,6 +23,7 @@ const PageTemplate = ({ data }) => (
         </>
       );
     })}
+    <pre>{JSON.stringify(data, null, 2)}</pre>
   </Layout>
 );
 
@@ -33,6 +34,7 @@ export const pq = graphql`
     content(id: { eq: $id }) {
       title
       elements
+      elementsButWithFieldExtension
     }
     # sleep(timeout: 2500) {
     #   result

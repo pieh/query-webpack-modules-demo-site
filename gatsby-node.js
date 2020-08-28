@@ -54,7 +54,39 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
     result: JSON
   }
 
+  type Content implements Node {
+    elementsButWithFieldExtension: String @modularize
+  }
+
   `);
+
+  actions.createFieldExtension({
+    name: `modularize`,
+    extend: (opts, prevFieldConfig) => {
+      return {
+        type: `[JSON]`,
+        resolve: async (source, args, context) => {
+          console.log(`context.path from field extension`, context.path);
+
+          const elements = (source.elements || []).map((element) => {
+            const moduleID = context.pageModel.setModule({
+              source: require.resolve(
+                `./src/components/page-builder/${element.component}`
+              ),
+            });
+
+            return {
+              ...element,
+              component: moduleID,
+            };
+          });
+
+          return elements;
+        },
+      };
+    },
+  });
+
   actions.createTypes([
     schema.buildObjectType({
       name: `Content`,
